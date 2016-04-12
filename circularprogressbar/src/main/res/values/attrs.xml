@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircularProgressBar">
+        <attr name="showPercentText" format="boolean"/>
+        <attr name="finishedProgressColor" format="color"/>
+        <attr name="unFinishedProgressColor" format="color"/>
+        <attr name="percentTextColor" format="color"/>
+    </declare-styleable>
+</resources>
