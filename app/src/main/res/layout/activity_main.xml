@@ -23,7 +23,8 @@
         app:showPercentText="true"
         app:percentTextColor="#FFFFFF"
         app:finishedProgressColor="#0F8AE9"
-        app:unFinishedProgressColor="#D5AAA0"/>
+        app:unFinishedProgressColor="#D5AAA0"
+        />
 
     <SeekBar
         android:id="@+id/seekBarProgress"

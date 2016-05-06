@@ -81,7 +81,7 @@ public class CircularProgressBar extends View {
         initDrawValues();
         if(paint == null)
             paint = new Paint();
-        canvas.drawColor(finishedProgressColor);
+        canvas.drawColor(Color.TRANSPARENT);
         paint.setColor(unFinishedProgressColor);
         canvas.drawCircle(pivotX, pivotY, borderRadius, paint);
 
