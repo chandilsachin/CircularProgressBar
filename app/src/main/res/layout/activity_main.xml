@@ -23,7 +23,7 @@
         app:showPercentText="true"
         app:percentTextColor="#FFFFFF"
         app:finishedProgressColor="#0F8AE9"
-        app:unFinishedProgressColor="#D5AAA0"
+        app:unFinishedProgressColor="#00000000"
         />
 
     <SeekBar

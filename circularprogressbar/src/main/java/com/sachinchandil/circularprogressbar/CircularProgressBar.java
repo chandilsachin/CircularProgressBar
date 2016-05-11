@@ -47,6 +47,8 @@ public class CircularProgressBar extends View {
     private int unFinishedProgressColor;
     private boolean showPercentText;
     private int percentTextColor;
+    private int borderColor;
+    private int borderWidth = 5;
 
 
     private int startAngle = -90;
@@ -73,6 +75,8 @@ public class CircularProgressBar extends View {
 
         percent = (progress / max) * 100;
         sweepAngle = (int) (360 / (100 / percent));
+
+        borderColor = finishedProgressColor;
     }
     private Paint paint;
     @Override
@@ -82,9 +86,19 @@ public class CircularProgressBar extends View {
         if(paint == null)
             paint = new Paint();
         canvas.drawColor(Color.TRANSPARENT);
-        paint.setColor(unFinishedProgressColor);
+
+        // border of progressbar
+        paint.setColor(borderColor);
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(borderWidth);
         canvas.drawCircle(pivotX, pivotY, borderRadius, paint);
 
+        // solid circle for unfinished color
+        paint.setColor(unFinishedProgressColor);
+        paint.setStyle(Paint.Style.FILL);
+        canvas.drawCircle(pivotX, pivotY, borderRadius, paint);
+
+        // solid arc for finished color
         paint.setColor(finishedProgressColor);
         canvas.drawArc(circleBound, startAngle, sweepAngle, true, paint);
         if(showPercentText)
