@@ -87,6 +87,9 @@ public class CircularProgressBar extends View {
             paint = new Paint();
         canvas.drawColor(Color.TRANSPARENT);
 
+        // to smooth edges
+        paint.setFlags(Paint.ANTI_ALIAS_FLAG);
+
         // border of progressbar
         paint.setColor(borderColor);
         paint.setStyle(Paint.Style.STROKE);
